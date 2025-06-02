@@ -3,7 +3,7 @@ async function getPredictedLabel(landmarks) {
     // Prepare data - flatten landmarks to a 1D array [x1,y1,z1, x2,y2,z2, ...]
     const flatLandmarks = landmarks.flatMap(point => [point.x, point.y, point.z]);
 
-    const response = await fetch("http://localhost:8000/predict", {
+    const response = await fetch("https://gcdolatouvtw.eu-central-1.clawcloudrun.com/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ landmarks: flatLandmarks }),
