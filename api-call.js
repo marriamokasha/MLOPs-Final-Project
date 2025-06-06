@@ -31,7 +31,7 @@ async function getPredictedLabel(landmarks) {
         return "down";
       case "stop":
         return "left";
-      case "stop_inverted":
+      case "fist":
         return "right";
       default:
         return null;
